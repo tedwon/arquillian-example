@@ -1,0 +1,20 @@
+<arquillian xmlns="http://jboss.org/schema/arquillian"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="
+        http://jboss.org/schema/arquillian
+        http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+
+    <defaultProtocol type="Servlet 3.0">
+        <property name="host">10.64.168.42</property>
+        <property name="port">8080</property>
+    </defaultProtocol>
+
+    <container qualifier="jbossas-remote" default="true">
+        <configuration>
+            <property name="managementPort">9990</property>
+            <property name="managementAddress">10.64.168.42</property>
+            <property name="username">admin</property>
+            <property name="password">admin123!</property>
+        </configuration>
+    </container>
+</arquillian>
